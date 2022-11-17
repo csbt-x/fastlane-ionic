@@ -1,0 +1,169 @@
+<!--
+   Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic 5 groceryee app
+  Created : 10-Sep-2020
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2020-present initappz.
+ -->
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5 ">
+
+  <div style="background-color: rgba(0,0,0,0.8)">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">{{util.getString('Get connected with us on social networks!')}} </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right social_div">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <mdb-icon fab icon="facebook" class="white-text mr-4"></mdb-icon>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <mdb-icon fab icon="twitter" class="white-text mr-4"></mdb-icon>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <mdb-icon fab fab icon="google-plus" class="white-text mr-4"></mdb-icon>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <mdb-icon fab icon="linkedin" class="white-text mr-4"></mdb-icon>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <mdb-icon fab icon="instagram" class="white-text mr-4"></mdb-icon>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold footer_lbl">Groceryee</h6>
+        <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+        <p class="detail_content">Deliver an effortless grocery shopping experience to all your customers. Give Your
+          Shoppers A New, Better And
+          Convenient Grocery Shopping. Totally Customizable. Best Pricing. Services: Android & IOS, Web Applications,
+          Totally Customizable, Customer App
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold footer_lbl">{{util.getString('Services')}} </h6>
+        <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+        <div class="flex_box" (click)="goToHome()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Home')}} </a>
+        </div>
+
+        <div class="flex_box" (click)="goToOrders()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Orders')}} </a>
+        </div>
+        <div class="flex_box" (click)="util.publishCartBtn()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Cart')}} </a>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold footer_lbl">{{util.getString('Useful links')}} </h6>
+        <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+        <div class="flex_box" (click)="goToAccount()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Your Account')}} </a>
+        </div>
+        <div class="flex_box" (click)="goToPrivacy()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Privacy & Terms')}}
+          </a>
+        </div>
+        <div class="flex_box" (click)="goToRefund()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Refund Policy')}}
+          </a>
+        </div>
+        <div class="flex_box" (click)="about()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('About')}} </a>
+        </div>
+        <div class="flex_box" (click)="goToHelp()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Help')}} </a>
+        </div>
+        <div class="flex_box" (click)="goToContact()">
+          <mdb-icon fas icon="angle-right"></mdb-icon> <a class="dark-grey-text">{{util.getString('Contact')}} </a>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold footer_lbl">{{util.getString('Contact')}} </h6>
+        <!-- <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+        <div class="flex_box">
+          <mdb-icon fas icon="home"></mdb-icon>
+          <label>{{util.general && util.general.address ? util.general.address:'' }}</label>
+        </div>
+        <div class="flex_box">
+          <mdb-icon fas icon="envelope"></mdb-icon>
+          <label>{{util.general && util.general.email ? util.general.email:'' }}</label>
+        </div>
+        <div class="flex_box">
+          <mdb-icon fas icon="phone"></mdb-icon>
+          <label>+ {{util.general && util.general.mobile ? util.general.mobile:'' }}</label>
+        </div>
+        <div class="flex_box">
+          <mdb-icon fas icon="print"></mdb-icon>
+          <label for="">+ {{util.general && util.general.email ? util.general.email:'' }} </label>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="background: rgba(0,0,0,0.8);">© {{year}}
+    {{util.getString('Copyright')}}:
+    <a href="https://initappz.com/"> initappz.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
